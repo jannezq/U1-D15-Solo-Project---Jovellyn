@@ -1,6 +1,7 @@
 body{
     margin-inline: auto;
     width: 1500px;
+    background-color: blanchedalmond;
 }
 
 h1{
@@ -41,4 +42,8 @@ tr td{
 
 .test{
     background-color: beige;
+}
+
+.background-link{
+    background-color: red;
 }

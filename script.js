@@ -101,17 +101,19 @@ function newRow() {
 //Q 36
 // add class to every row
 function addClassTest() {
-  let rowNodes = document.getElementsByTagName("td");
-  //let allRowNode = document.querySelector("tr");
-  for (let row of rowNodes) {
+  //let rowNodes = document.getElementsByTagName("td");
+  let trNodes = document.querySelectorAll("tr");
+  for (let row of trNodes) {
     row.classList.add("test");
   }
 }
 
 // q 37
 function addBackground() {
-  let linkNode = document.getElementsByTagName("a");
-  linkNode.style.background = "red";
+  let linkNode = document.querySelectorAll("a");
+  for (let links of linkNode) {
+    links.classList.add("background-link");
+  }
 }
 
 // q38
