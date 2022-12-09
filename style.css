@@ -1,0 +1,41 @@
+body{
+    margin-inline: auto;
+    width: 1500px;
+}
+
+h1{
+    text-align: center;
+}
+
+a{
+    color: pink;
+    text-decoration: none;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+}
+
+.borderLine{
+    border: 5px solid saddlebrown;
+    border-radius: 5px;
+}
+
+p{
+    margin: 10px;
+}
+
+.changeFont{
+    font-size: 30px;
+    font-weight: 400px;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+tr td{
+    border: 1px solid green;
+}
+

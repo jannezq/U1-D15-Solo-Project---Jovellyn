@@ -12,49 +12,77 @@
         4) Create a table with 5 columns and 4 rows
         
         5) Add an image to each second cell of every row
+
         6) Add a anchor link for every image
+
         7) Merge together 2 table cells
+
         8) Divide the page using a horizontal line
+
         9) Create a container with a nested paragraph and a nested unordered list
+
         10) Create a footer with some information about the page creator
 
         CSS EXERCISES
 
         11) Give a maximum width to the body and center it into the page
+
         12) Set every h1 to be centered
+
         13) Change the color of each link in the page
+
         14) Create a class with a border assigned to it
+
         15) Set the previously created table to have rounded corners
+
         16) Add a margin between every paragraph
+
         17) Create a class which changes font size and text weight when applied
+
         18) Create a class to hide a piece of content
+
         19) Add a green border to each <td>
+
         20) Add a dotted red border to each <tr> (note: <tr> does not accept a border property)
 
         JS EXERCISES
 
         21) Given variables x = "John" and y = "Doe", write on the console "John <> Doe"
+
         22) Create an object with properties such name, surname, email
+
         23) Delete the email property from the previously created object
+
         24) Create an array with 10 strings in it
+
         25) Print in the console every string from the previous array
-        26) Create an array with 100 random numbers in it
-        27) Write a function to get the maximum and minimum values from the previously created array
-        28) Create an array of arrays, in which every array has 10 random numbers
-        29) Create a function that gets 2 arrays as parameters and returns the longest one
-        30) Create a function that gets 2 arrays of numbers as parameters and returns the one with the higher sum of values
+
+        26) Create an array with 100 random numbers in it*
+
+        27) Write a function to get the maximum and minimum values from the previously created array*
+        28) Create an array of arrays, in which every array has 10 random numbers*
+        29) Create a function that gets 2 arrays as parameters and returns the longest one*
+        30) Create a function that gets 2 arrays of numbers as parameters and returns the one with the higher sum of values*
 
         DOM EXERCISES
 
         31) Get the element with an id of "container" from the page
+
         32) Get every <td> element from the page
+
         33) Use a loop for printing the text inside of every <td> element in the page
+
         34) Write a function to change the heading of the page
+
         35) Write a function to add an extra row to the table
-        36) Write a function to add a class of "test" to each row in the table
-        37) Write a function to add a red background to every link in the page
-        38) Console log "Page loaded" when the page is correctly loaded
+
+        36) Write a function to add a class of "test" to each row in the table*
+
+        37) Write a function to add a red background to every link in the page*
+        38) Console log "Page loaded" when the page is correctly loaded*
+
         39) Write a function to add new items to a unordered list
+
         40) Write a function to empty a list
 
         EXTRA EXERCISES
@@ -77,37 +105,101 @@
 
 <head>
   <title>Solo Project Day 15 Unit 1 Jovellyn </title>
+  <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
   <div id="container">
+
     <h1>Jovellyn Quiapos</h1>
+    <hr>
+    <button onclick="hideImages()">Hide Images</button> <button onclick="toggleTable()">Toggle Table</button>
+    <hr>
     <h2>Favourite Food to eat</h2>
-    <ol>
+    <ol id="favourite-food">
       <li>Dumplings</li>
       <li>Filipino Food</li>
       <li>Sushi</li>
     </ol>
-
-    <table>
+    <hr>
+    <table id="table-container" class="borderLine">
       <tr>
         <th>Education</th>
         <th>Location</th>
         <th>Year</th>
+        <th>Photo</th>
       </tr>
       <tr>
         <td>Epicode</td>
-        <td>Dublin</td>
+        <td><a href="https://epicode.com/en/">EPICODE<img src="/epicode.png" alt="epicode"></a></td>
         <td>2022-2023</td>
+        <td><a href="https://epicode.com/en/">EPICODE<img src="/epicode.png" alt="epicode"></a></td>
       </tr>
       <tr>
-        <td>Higher Certificate of Computing & Business</td>
-        <td>Dublin</td>
+        <td>National College of Ireland</td>
+        <td><a href="https://www.ncirl.ie/">National College of Ireland<img src="/logo.png"
+              alt="national college of ireland logo"></a></td>
         <td>2014-2018</td>
+        <td><a href="https://www.ncirl.ie/">National College of Ireland<img src="/logo.png"
+              alt="national college of ireland logo"></a></td>
+      </tr>
+      <tr>
+        <td>Ryanair</td>
+        <td><a href="https://careers.ryanair.com/">Ryanair<img src="/ryanair_logo.jpg" alt="ryaniar logo"></a></td>
+        <td>2018</td>
+        <td><a href="https://careers.ryanair.com/">Ryanair<img src="/ryanair_logo.jpg" alt="ryaniar logo"></a></td>
+      </tr>
+      <tr>
+        <td>Trim Community School</td>
+        <td rowspan="2"><a href="https://en.wikipedia.org/wiki/Trim,_County_Meath">Trim<img src="/flag.png"
+              alt="irish flag"></a></td>
+        <td>2009-2014</td>
+        <!-- <td><a href="https://en.wikipedia.org/wiki/Trim,_County_Meath"><img src="/flag.png" alt="irish flag"></a></td> -->
+      </tr>
+      <tr>
+        <td>Trim Primary School</td>
+        <!-- <td><a href="https://en.wikipedia.org/wiki/Trim,_County_Meath"><img src="/flag.png" alt="irish flag"></a></td> -->
+        <td>2003-2009</td>
+        <td rowspan="2">Trim<a href="https://en.wikipedia.org/wiki/Trim,_County_Meath"><img src="/flag.png"
+              alt="irish flag"></a></td>
       </tr>
     </table>
-
+    <hr>
+    <div id="second-container" class="hidden">
+      <p class="changeFont">Sed porttitor mollis dolor, eu vulputate est volutpat at. Praesent cursus egestas rhoncus.
+        In
+        et
+        posuere felis. Nullam dictum justo sit amet leo lobortis pretium. Sed condimentum augue ex, eget consectetur
+        enim semper eget. Duis ac dolor eget mi blandit vehicula. Sed sapien urna, feugiat in nisl quis, consectetur
+        suscipit augue
+      </p>
+      <h2>Hobbies</h2>
+      <ul id="hobbies">
+        <li>Gaming</li>
+        <li>Drawing</li>
+        <li>Eating</li>
+      </ul>
+    </div>
   </div>
+  <div class="footer-container">
+    <h2>About Me</h2>
+    <p class="changeFont">
+      Currently in education, studying, to become a full-stack developer.
+      Former Flight Attendant with 4 years of experience currently based in Charleroi Airport, Belgium. Great teamwork
+      and communication skills.
+      Can work in a pressured situation and look into ways to make both passengers and crew work well.
+      Have quick thinking and sociable skills to adapt to different scenarios. Work with various types of personalities
+      throughout my years.</p>
+
+    <p>With some knowledge of Graphic Design as I was self-taught at such a young age and had a great interest when
+      growing up.
+      Coding knowledge from going to the National College of Ireland and doing the Computing and Business course.
+    </p>
+    <p>
+      Have a huge interest in business and marketing and mostly do self-taught courses to keep myself up to date.
+    </p>
+  </div>
+  <script src="/script.js"></script>
 </body>
 
 </html>
