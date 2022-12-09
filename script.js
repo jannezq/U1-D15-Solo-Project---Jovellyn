@@ -53,7 +53,12 @@ console.log(numberMaxMin(arrayRandom));
 //Q 28
 let anotherArrayInArray = [];
 
-for (let i = 0; i < 10; i++) {}
+for (let i = 0; i < 10; i++) {
+  let newArray = [];
+  newArray.push(Math.floor(Math.random() * 10) + 1);
+  anotherArrayInArray.push(newArray);
+}
+console.log("new array :", anotherArrayInArray);
 
 //Q 29
 
@@ -90,18 +95,17 @@ function newRow() {
 
   document.getElementById("table-container").appendChild(newRow);
 
-  newRow.style.background = "orange";
+  //newRow.style.background = "orange";
 }
 
 //Q 36
 // add class to every row
 function addClassTest() {
-  let trNodes = document.getElementsByTagName("tr");
+  let rowNodes = document.getElementsByTagName("td");
   //let allRowNode = document.querySelector("tr");
-  trNodes.classList.add("test");
-
-  console.log(trNodes);
-  return trNodes;
+  for (let row of rowNodes) {
+    row.classList.add("test");
+  }
 }
 
 // q 37
