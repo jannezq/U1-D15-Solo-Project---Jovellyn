@@ -2,7 +2,7 @@
 let x = "John";
 let y = "Doe";
 
-console.log(x, "< >", y);
+console.log(x, "<>", y);
 
 //Q 22
 let personObject = {
@@ -16,32 +16,39 @@ delete personObject.email;
 console.log(personObject);
 
 // Q 24
-let array1 = [
-  "Hello",
-  "My",
-  "Name",
-  "Is",
-  "Jovellyn",
-  "Nice",
-  "To",
-  "Meet",
-  "You",
-  "!",
-];
+let array1 = [];
+for (let i = 0; i < 10; i++) {
+  array1.push(i);
+}
 
-console.log(array1);
+// Q25
+for (i = 0; i < array1.length; i++) {
+  console.log("Number from array1 " + i);
+}
+
 // Q 26
 let arrayRandom = [];
-
-arrayRandom.push(Math.floor(Math.random() * 101));
+for (let i = 0; i < 100; i++) {
+  arrayRandom.push(Math.floor(Math.random() * 100) + 1);
+}
 console.log(arrayRandom);
 //return arrayRandom;
 
 // Q 27
-function maxNumber() {}
+function numberMaxMin(nums) {
+  let max = nums[0];
+  let min = nums[0];
 
-// Q 27
-function minNumber() {}
+  //for ... of statement
+  for (let num of nums) {
+    //if the number is grater than the number from random, it is the ,ax
+    max = num > max ? num : max;
+    //if the number is smaller than the number from random, it is the smallest
+    min = num < min ? num : min;
+  }
+  return { max, min };
+}
+console.log(numberMaxMin(arrayRandom));
 
 //Q 28
 
@@ -63,7 +70,7 @@ console.log(tdNodes);
 // Q 33
 let allTdNodes = tdNodes;
 for (let i = 0; i < tdNodes.length; i++) {
-  console.log(allTdNodes[i].innerText);
+  console.log("Every td on table: ", allTdNodes[i].innerText);
 }
 
 //Q 34
@@ -115,14 +122,19 @@ function addNewItemUl(content) {
   document.getElementById("hobbies").appendChild(newItem);
 }
 
+// q 40
 function removeList() {
   let removeList = document.getElementById("favourite-food");
   removeList.remove();
 }
 
+// q 41
+
+// q 42
 function hideImages() {
   let imgSelects = document.getElementsByTagName("img");
   imgSelects.classList.add("hidden");
 }
 
+// q42
 function toggleTable() {}
