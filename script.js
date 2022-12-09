@@ -51,6 +51,9 @@ function numberMaxMin(nums) {
 console.log(numberMaxMin(arrayRandom));
 
 //Q 28
+let anotherArrayInArray = [];
+
+for (let i = 0; i < 10; i++) {}
 
 //Q 29
 
