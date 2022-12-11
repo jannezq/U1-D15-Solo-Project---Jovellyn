@@ -27,18 +27,22 @@ for (i = 0; i < array1.length; i++) {
 }
 
 // Q 26
-let arrayRandom = [];
-for (let i = 0; i < 100; i++) {
-  arrayRandom.push(Math.floor(Math.random() * 100) + 1);
+
+function randomGenerator() {
+  let arrayRandom = [];
+  for (let i = 0; i < 100; i++) {
+    arrayRandom.push(Math.floor(Math.random() * 100) + 1);
+  }
+  return arrayRandom;
 }
-console.log(arrayRandom);
+console.log(randomGenerator);
 //return arrayRandom;
 
 // Q 27
+let arrayRandom = [];
 function numberMaxMin(nums) {
   let max = nums[0];
   let min = nums[0];
-
   //for ... of statement
   for (let num of nums) {
     //if the number is grater than the number from random, it is the ,ax
@@ -61,6 +65,18 @@ for (let i = 0; i < 10; i++) {
 console.log("new array :", anotherArrayInArray);
 
 //Q 29
+let arrayOne = randomGenerator(7);
+let arrayTwo = randomGenerator(4);
+
+function longesArrayLength(arrayOne, arrayTwo) {
+  if (arrayOne.length > arrayTwo.length) {
+    console.log("Array one is longer than Array two");
+  } else if (arrayOne.length < arrayTwo.length) {
+    console.log("Array two is longer than Array One");
+  } else {
+    console.log("Both Array one and Array Two are the same lenghth");
+  }
+}
 
 // Q 30
 
@@ -196,3 +212,7 @@ function pinkBorder() {
 }
 
 window.onload = pinkBorder;
+
+// q 49
+
+// q 50
