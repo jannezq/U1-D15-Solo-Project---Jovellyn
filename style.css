@@ -51,3 +51,7 @@ tr td{
 a:hover {
     color: blueviolet;
 }
+
+.pink-hover{
+    border: 2px solid pink;
+}

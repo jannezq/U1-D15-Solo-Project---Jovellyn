@@ -157,8 +157,42 @@ function hideImages() {
   }
 }
 
-// q42
+// q43
 function toggleTable() {
   let tableContainer = document.querySelector("table");
   tableContainer.classList.toggle("hidden");
 }
+
+// q 44
+
+// q45
+
+// q46
+
+//randomising colours for background (check bingo)
+function randomBgmColor() {
+  let r = Math.floor(Math.random() * 255 + 1);
+  let g = Math.floor(Math.random() * 255 + 1);
+  let b = Math.floor(Math.random() * 255 + 1);
+
+  return [r, g, b];
+}
+
+for (let tdData of tdNodes) {
+  tdData.addEventListener("click", function () {
+    tdData.style.background = `rgb(${randomBgmColor()})`;
+  });
+}
+
+// q 47
+
+//q48
+function pinkBorder() {
+  for (let tdData of tdNodes) {
+    tdData.addEventListener("mouseover", function () {
+      tdData.classList.add("pink-border");
+    });
+  }
+}
+
+window.onload = pinkBorder;
