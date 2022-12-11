@@ -47,3 +47,7 @@ tr td{
 .background-link{
     background-color: red;
 }
+
+a:hover {
+    color: blueviolet;
+}

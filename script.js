@@ -120,6 +120,8 @@ function addBackground() {
 window.onload = function () {
   console.log("Page Loaded");
 };
+
+window.onload = onLoadActions;
 //
 
 //q 39
@@ -138,12 +140,25 @@ function removeList() {
 }
 
 // q 41
+function onLoadActions() {
+  let linkNode = document.getElementsByTagName("a");
+  for (let linknodes of linkNode) {
+    linknodes.addEventListener("mouseover", function () {
+      alert(linknodes.getAttribute("href"));
+    });
+  }
+}
 
 // q 42
 function hideImages() {
   let imgSelects = document.getElementsByTagName("img");
-  imgSelects.classList.add("hidden");
+  for (let image of imgSelects) {
+    image.classList.toggle("hidden");
+  }
 }
 
 // q42
-function toggleTable() {}
+function toggleTable() {
+  let tableContainer = document.querySelector("table");
+  tableContainer.classList.toggle("hidden");
+}
